@@ -68,6 +68,16 @@ This folder is a **standalone product**: the same prioritization workflow works 
 
 ---
 
+### Gemini (Custom Gem = “skill”)
+
+**Use as skill:** Create a **Gem** in Gemini. In the Gem’s **Instructions** (or “How should this Gem respond?”), paste the content of **platforms/Gemini/Custom_Instructions.md**. Use this Gem whenever you want to prioritize.
+
+**Details:** [platforms/Gemini/README.md](platforms/Gemini/README.md)
+
+**If you don’t use Gems:** Paste **Prioritization_Playbook.md** in the chat and ask Gemini to follow it, or use the one-shot prompt below.
+
+---
+
 ### ClawdBot (skills are code-based; no markdown skill)
 
 **Workaround:** ClawdBot skills use manifest.json + code, not a single markdown skill. Use **Custom instructions** if ClawdBot supports them: paste **platforms/ClawdBot/Custom_Instructions.md**. Otherwise paste **Prioritization_Playbook.md** in the chat or use the one-shot prompt below.

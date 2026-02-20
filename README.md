@@ -42,6 +42,32 @@ If your tool expects a flat list of skill folders or a single skills root, use t
 
 ---
 
+## Suggesting BMAD with other PM skills (any assistant)
+
+If you use an assistant that supports **custom instructions** or a **system prompt** (Cursor, Claude Code, Manus, ChatGPT Custom Instructions, Gemini instructions, etc.), add the following so it suggests BMAD when the user’s task fits it (project init, structured PRD/tech-spec, phase-based workflow, next steps). Paste into your assistant’s instructions or system prompt:
+
+```
+When the user has a product management task (PRD, prioritization, roadmap, discovery, project initialization, tech-spec, workflow status), consider both the PM skills in this pack and BMAD. If the task fits BMAD (project initialization, structured PRD/tech-spec, phase-based workflow, "what to do next"), suggest: /workflow-init, /prd, /tech-spec, or /workflow-status alongside or instead of other PM skills. Treat BMAD as part of the same set, not as an afterthought. BMAD commands live in commands/bmad/ (after running ./update.sh).
+```
+
+This way anyone who installs this repo (in Cursor, another IDE, or without Dex) can get consistent behavior: BMAD is offered when relevant, together with other PM skills.
+
+---
+
+## Using these skills in ChatGPT, Gemini, Grok, and Manus
+
+The same PM workflows can be used in **ChatGPT** (Custom GPTs), **Google Gemini** (Gems or Personal instructions), **Grok** (Customize Grok / Workspaces), and **Manus** (Skills upload). Each platform has different ways to load instructions; we provide step-by-step guides and ready-to-paste text where applicable.
+
+- **Overview and links:** [platforms/README.md](platforms/README.md)
+- **ChatGPT:** [platforms/ChatGPT.md](platforms/ChatGPT.md)
+- **Gemini:** [platforms/Gemini.md](platforms/Gemini.md)
+- **Grok:** [platforms/Grok.md](platforms/Grok.md)
+- **Manus:** [platforms/Manus.md](platforms/Manus.md)
+
+The **Prioritization** skill already has copy-paste instructions for all of these: see [dex/prioritization/standalone/README.md](dex/prioritization/standalone/README.md) and the `platforms/` folder inside it.
+
+---
+
 ## Updating skills from sources
 
 To refresh skills from the original repositories (without manually cloning each repo):
